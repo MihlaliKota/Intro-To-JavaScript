@@ -292,3 +292,25 @@ let mixedArray = [1, "apple", true];
 ```
 
 Overall, arrays are a versatile and commonly used data structure in JavaScript for managing ordered collections of values.
+
+## Day 3
+
+### Functions
+-------------
+
+In JavaScript, a function is a reusable block of code that can be called from anywhere in your program. This helps to avoid repetition and promotes modularity in your code by breaking it into smaller, manageable pieces.
+
+Just like other programming languages, JavaScript supports functions like `alert()` and `write()`, which are predefined and can be used repeatedly. These functions are written in core JavaScript and can be called whenever needed.
+
+However, JavaScript also allows you to create your own custom functions. These functions are defined using the `function` keyword, followed by a unique name, optional parameters (inputs), and a block of code enclosed in curly braces.
+
+Example:
+```javascript
+function sayHello() {
+    console.log("Hello!");
+}
+```
+
+In this example, `sayHello` is the name of the function, and it takes no parameters. The code inside the function (console.log("Hello!");) will be executed whenever the function is called.
+
+Defining and using custom functions in JavaScript allows you to write modular, reusable code, making your programs more organized and easier to maintain.
