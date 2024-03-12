@@ -331,4 +331,22 @@ console.log(isRaining); // Output: true
 
 In this example, the variable `isRaining` holds the boolean value `true`.
 
-****
+**Conditionals**
+
+In JavaScript, booleans are often used in conjunction with conditionals to control the flow of the program based on whether a condition evaluates to true or false. Conditionals allow you to execute different blocks of code depending on whether certain conditions are met.
+
+For example, the `if` statement is a common conditional structure that checks whether a condition is true and executes a block of code if the condition is met. Here's an example:
+
+```javascript
+let isRaining = true;
+
+if (isRaining) {
+    console.log("Remember to bring an umbrella!");
+}
+```
+
+In this example, the code inside the `if` statement is executed only if the `isRaining` variable is `true`. If `isRaining` were `false`, the code inside the `if` statement would not be executed.
+
+Conditionals can also be combined using logical operators such as `&&` (logical AND), `||` (logical OR), and `!` (logical NOT) to create more complex conditions.
+
+Understanding how to use conditionals with booleans is essential for controlling the behavior of your JavaScript programs based on different conditions or states.
