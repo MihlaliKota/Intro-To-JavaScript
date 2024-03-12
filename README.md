@@ -434,3 +434,38 @@ JavaScript syntax involves accessing objects, properties, and methods using the 
 - The `window` object is omitted in JavaScript code, assuming the method is invoked on the `window` object.
 
 In JavaScript, referencing elements in the DOM is done using the dot syntax, where objects containing the desired element are specified consecutively separated by dots.
+
+## Day 2
+
+### Additional JavaScript Tasks
+-------------------------------
+
+### JavaScript Functions and Operators Overview:
+
+#### Functions:
+- **Calling Functions**: You can call one function from another, allowing you to nest functions and run them together.
+- **Creating Objects with User-defined Functions**: Objects are central to JavaScript, and you can create your own objects using functions.
+  - **Steps**: Define the object in a user-defined function, then use the `new` keyword to create the object.
+- **Defining Properties**: After creating an object, you can define properties for it by assigning values to them.
+  - **Methods**: An object's properties can also be methods, which are actions applied directly to objects.
+
+#### Operators:
+JavaScript has various types of operators:
+- **Assignment**: Assigns a value to its left operand based on the value of its right operand.
+- **Comparison**: Compares operands and returns a logical value based on whether the comparison is true.
+- **Arithmetic**: Performs mathematical operations on numerical values.
+- **Bitwise**: Treats operands as a set of 32 bits and performs bitwise operations.
+- **Logical**: Operates on Boolean values and returns a Boolean value.
+- **String**: Concatenates two string values together.
+- **Conditional (Ternary)**: The only operator taking three operands and returns one value based on a condition.
+- **Comma**: Evaluates both operands and returns the value of the last operand.
+- **Unary**: Performs an operation with only one operand.
+  - **Delete**: Deletes an object's property.
+  - **Typeof**: Returns the type of its operand.
+  - **Void**: Specifies an expression to be evaluated without returning a value.
+- **Relational**: Compares operands and returns a Boolean value.
+  - **in**: Returns true if the specified property is in the specified object.
+  - **instanceof**: Returns true if the specified object is of the specified object type.
+- **Operator Precedence**: Determines the order operators are applied when evaluating an expression. Parentheses can override precedence.
+
+JavaScript operators include binary, unary, and a special ternary operator, each with different behaviors and use cases. Understanding how to use and combine these operators is essential for effective JavaScript programming.
