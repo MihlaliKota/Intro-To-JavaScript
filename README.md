@@ -314,3 +314,21 @@ function sayHello() {
 In this example, `sayHello` is the name of the function, and it takes no parameters. The code inside the function (console.log("Hello!");) will be executed whenever the function is called.
 
 Defining and using custom functions in JavaScript allows you to write modular, reusable code, making your programs more organized and easier to maintain.
+
+## Day 4
+
+### Booleans & Conditionals
+---------------------------
+
+**Booleans**
+
+Booleans in programming represent values that can be either true or false. They're perfect for situations where something can be "on" or "off," "yes" or "no." Storing booleans in variables helps track their values and update them as needed. For instance:
+
+```javascript
+let isRaining = true;
+console.log(isRaining); // Output: true
+```
+
+In this example, the variable `isRaining` holds the boolean value `true`.
+
+****
