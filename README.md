@@ -350,3 +350,56 @@ In this example, the code inside the `if` statement is executed only if the `isR
 Conditionals can also be combined using logical operators such as `&&` (logical AND), `||` (logical OR), and `!` (logical NOT) to create more complex conditions.
 
 Understanding how to use conditionals with booleans is essential for controlling the behavior of your JavaScript programs based on different conditions or states.
+
+
+# Week 2
+
+## Day 1
+
+### Type Conversions
+--------------------
+
+In JavaScript, data types can often be automatically converted to the appropriate type when using operators and functions. For example, the `alert()` function automatically converts any value to a string to display it, while mathematical operations convert values to numbers as needed. However, there are cases where we need to explicitly convert a value to a specific type.
+
+**String Conversion**
+String conversion occurs when we need the string representation of a value. This is commonly done when displaying values using `alert()` or when explicitly converting a value to a string using the `String()` function.
+
+```javascript
+let value = true;
+alert(typeof value); // boolean
+value = String(value); // value is now a string "true"
+alert(typeof value); // string
+```
+
+String conversion is straightforward, with values like `false` becoming `"false"` and `null` becoming `"null"`.
+
+**Numeric Conversion**
+Numeric conversion occurs automatically in mathematical operations and expressions. We can explicitly convert a value to a number using the `Number()` function.
+
+```javascript
+let str = "123";
+alert(typeof str); // string
+let num = Number(str); // becomes the number 123
+alert(typeof num); // number
+```
+
+Explicit numeric conversion is useful when reading values from string-based sources but expecting a number. If the string is not a valid number, the result of the conversion is `NaN`.
+
+**Boolean Conversion**
+Boolean conversion is the simplest and happens in logical operations. We can also perform boolean conversion explicitly using the `Boolean()` function.
+
+```javascript
+alert(Boolean(0)); // false
+alert(Boolean("hello")); // true
+alert(Boolean("")); // false
+alert(Boolean(1)); // true
+```
+
+Values like `0`, an empty string, `null`, `undefined`, and `NaN` are considered "empty" and become `false` when converted to boolean. Other values become `true`.
+
+#### Summary:
+- JavaScript provides automatic and explicit conversion methods for strings, numbers, and booleans.
+- String conversion occurs when needing the string representation of a value.
+- Numeric conversion happens automatically in mathematical operations and expressions or can be done explicitly with `Number()`.
+- Boolean conversion is straightforward and occurs in logical operations or with `Boolean()`.
+- Understanding conversion methods is essential for handling different data types effectively in JavaScript.
