@@ -403,3 +403,34 @@ Values like `0`, an empty string, `null`, `undefined`, and `NaN` are considered 
 - Numeric conversion happens automatically in mathematical operations and expressions or can be done explicitly with `Number()`.
 - Boolean conversion is straightforward and occurs in logical operations or with `Boolean()`.
 - Understanding conversion methods is essential for handling different data types effectively in JavaScript.
+
+### Document Object Model
+-------------------------
+
+The Document Object Model (DOM) is a programming interface for HTML and XML documents that provides a structured representation of the document and defines how to access its structure from scripts. It allows developers to access web pages as a structured group of nodes and connects web pages to scripts or programming languages.
+
+JavaScript syntax involves accessing objects, properties, and methods using the "dot syntax," where each object containing the property or method is included in the reference separated by dots.
+
+**Terms Defined**
+- **Object**: Any scriptable HTML element or core object associated with the JavaScript Object Model (e.g., `window`, `document`, `form`, `image`).
+- **Property**: Characteristics of an object, accessed similarly to HTML tag attributes.
+- **Method**: Actions applied directly to objects, causing reactions in HTML documents.
+- **Method Parameters**: Values passed to methods, providing information needed for their tasks.
+
+**Common JavaScript Methods**
+- `alert()`: Displays an alert dialog box.
+- `write()`: Writes content to a page.
+- `focus()`: Inserts the mouse cursor into a form element.
+
+**Core APIs in the DOM**
+- `document.getElementById(id)`: Retrieves an element by its ID.
+- `document.getElementsByTagName(name)`: Retrieves elements by their tag name.
+- `document.createElement(name)`: Creates a new element.
+- `parentNode.appendChild(node)`: Appends a child node to a parent node.
+
+**DOM Structure**
+- The `window` object represents the browser, and the `document` object is the root of the document.
+- Path references usually include the `document` object, as most objects belong to it.
+- The `window` object is omitted in JavaScript code, assuming the method is invoked on the `window` object.
+
+In JavaScript, referencing elements in the DOM is done using the dot syntax, where objects containing the desired element are specified consecutively separated by dots.
