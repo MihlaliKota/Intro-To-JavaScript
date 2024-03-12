@@ -397,7 +397,7 @@ alert(Boolean(1)); // true
 
 Values like `0`, an empty string, `null`, `undefined`, and `NaN` are considered "empty" and become `false` when converted to boolean. Other values become `true`.
 
-#### Summary:
+**Summary**
 - JavaScript provides automatic and explicit conversion methods for strings, numbers, and booleans.
 - String conversion occurs when needing the string representation of a value.
 - Numeric conversion happens automatically in mathematical operations and expressions or can be done explicitly with `Number()`.
