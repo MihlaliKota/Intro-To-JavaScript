@@ -440,16 +440,20 @@ In JavaScript, referencing elements in the DOM is done using the dot syntax, whe
 ### Additional JavaScript Tasks
 -------------------------------
 
-### JavaScript Functions and Operators Overview:
+#### JavaScript Functions and Operators Overview
 
-#### Functions:
+**Functions**
+-------------
+
 - **Calling Functions**: You can call one function from another, allowing you to nest functions and run them together.
 - **Creating Objects with User-defined Functions**: Objects are central to JavaScript, and you can create your own objects using functions.
   - **Steps**: Define the object in a user-defined function, then use the `new` keyword to create the object.
 - **Defining Properties**: After creating an object, you can define properties for it by assigning values to them.
   - **Methods**: An object's properties can also be methods, which are actions applied directly to objects.
 
-#### Operators:
+**Operators**
+-------------
+
 JavaScript has various types of operators:
 - **Assignment**: Assigns a value to its left operand based on the value of its right operand.
 - **Comparison**: Compares operands and returns a logical value based on whether the comparison is true.
