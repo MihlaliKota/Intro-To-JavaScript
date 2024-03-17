@@ -362,6 +362,7 @@ Understanding how to use conditionals with booleans is essential for controlling
 In JavaScript, data types can often be automatically converted to the appropriate type when using operators and functions. For example, the `alert()` function automatically converts any value to a string to display it, while mathematical operations convert values to numbers as needed. However, there are cases where we need to explicitly convert a value to a specific type.
 
 **String Conversion**
+
 String conversion occurs when we need the string representation of a value. This is commonly done when displaying values using `alert()` or when explicitly converting a value to a string using the `String()` function.
 
 ```javascript
@@ -386,6 +387,7 @@ alert(typeof num); // number
 Explicit numeric conversion is useful when reading values from string-based sources but expecting a number. If the string is not a valid number, the result of the conversion is `NaN`.
 
 **Boolean Conversion**
+
 Boolean conversion is the simplest and happens in logical operations. We can also perform boolean conversion explicitly using the `Boolean()` function.
 
 ```javascript
@@ -398,6 +400,7 @@ alert(Boolean(1)); // true
 Values like `0`, an empty string, `null`, `undefined`, and `NaN` are considered "empty" and become `false` when converted to boolean. Other values become `true`.
 
 **Summary**
+
 - JavaScript provides automatic and explicit conversion methods for strings, numbers, and booleans.
 - String conversion occurs when needing the string representation of a value.
 - Numeric conversion happens automatically in mathematical operations and expressions or can be done explicitly with `Number()`.
@@ -412,23 +415,27 @@ The Document Object Model (DOM) is a programming interface for HTML and XML docu
 JavaScript syntax involves accessing objects, properties, and methods using the "dot syntax," where each object containing the property or method is included in the reference separated by dots.
 
 **Terms Defined**
+
 - **Object**: Any scriptable HTML element or core object associated with the JavaScript Object Model (e.g., `window`, `document`, `form`, `image`).
 - **Property**: Characteristics of an object, accessed similarly to HTML tag attributes.
 - **Method**: Actions applied directly to objects, causing reactions in HTML documents.
 - **Method Parameters**: Values passed to methods, providing information needed for their tasks.
 
 **Common JavaScript Methods**
+
 - `alert()`: Displays an alert dialog box.
 - `write()`: Writes content to a page.
 - `focus()`: Inserts the mouse cursor into a form element.
 
 **Core APIs in the DOM**
+
 - `document.getElementById(id)`: Retrieves an element by its ID.
 - `document.getElementsByTagName(name)`: Retrieves elements by their tag name.
 - `document.createElement(name)`: Creates a new element.
 - `parentNode.appendChild(node)`: Appends a child node to a parent node.
 
 **DOM Structure**
+
 - The `window` object represents the browser, and the `document` object is the root of the document.
 - Path references usually include the `document` object, as most objects belong to it.
 - The `window` object is omitted in JavaScript code, assuming the method is invoked on the `window` object.
@@ -440,10 +447,7 @@ In JavaScript, referencing elements in the DOM is done using the dot syntax, whe
 ### Additional JavaScript Tasks
 -------------------------------
 
-#### JavaScript Functions and Operators Overview
-
 **Functions**
--------------
 
 - **Calling Functions**: You can call one function from another, allowing you to nest functions and run them together.
 - **Creating Objects with User-defined Functions**: Objects are central to JavaScript, and you can create your own objects using functions.
@@ -452,24 +456,287 @@ In JavaScript, referencing elements in the DOM is done using the dot syntax, whe
   - **Methods**: An object's properties can also be methods, which are actions applied directly to objects.
 
 **Operators**
--------------
 
 JavaScript has various types of operators:
-- **Assignment**: Assigns a value to its left operand based on the value of its right operand.
-- **Comparison**: Compares operands and returns a logical value based on whether the comparison is true.
-- **Arithmetic**: Performs mathematical operations on numerical values.
-- **Bitwise**: Treats operands as a set of 32 bits and performs bitwise operations.
-- **Logical**: Operates on Boolean values and returns a Boolean value.
-- **String**: Concatenates two string values together.
-- **Conditional (Ternary)**: The only operator taking three operands and returns one value based on a condition.
-- **Comma**: Evaluates both operands and returns the value of the last operand.
-- **Unary**: Performs an operation with only one operand.
-  - **Delete**: Deletes an object's property.
-  - **Typeof**: Returns the type of its operand.
-  - **Void**: Specifies an expression to be evaluated without returning a value.
-- **Relational**: Compares operands and returns a Boolean value.
-  - **in**: Returns true if the specified property is in the specified object.
-  - **instanceof**: Returns true if the specified object is of the specified object type.
-- **Operator Precedence**: Determines the order operators are applied when evaluating an expression. Parentheses can override precedence.
+- Assignment: Assigns a value to its left operand based on the value of its right operand.
+- Comparison: Compares operands and returns a logical value based on whether the comparison is true.
+- Arithmetic: Performs mathematical operations on numerical values.
+- Bitwise: Treats operands as a set of 32 bits and performs bitwise operations.
+- Logical: Operates on Boolean values and returns a Boolean value.
+- String: Concatenates two string values together.
+- Conditional (Ternary): The only operator taking three operands and returns one value based on a condition.
+- Comma: Evaluates both operands and returns the value of the last operand.
+- Unary: Performs an operation with only one operand.
+  - Delete: Deletes an object's property.
+  - Typeof: Returns the type of its operand.
+  - Void: Specifies an expression to be evaluated without returning a value.
+- Relational: Compares operands and returns a Boolean value.
+  - in: Returns true if the specified property is in the specified object.
+  - instanceof: Returns true if the specified object is of the specified object type.
+- Operator Precedence: Determines the order operators are applied when evaluating an expression. Parentheses can override precedence.
 
 JavaScript operators include binary, unary, and a special ternary operator, each with different behaviors and use cases. Understanding how to use and combine these operators is essential for effective JavaScript programming.
+
+**Regular Expressions**
+
+Regular expressions (regex) are sequences of characters used for search patterns in text operations. They describe what you're searching for in text data. They can range from simple characters to complex patterns. Regular expressions enable various text search and replace operations.
+
+Example:
+```javascript
+var patt = /w3schools/i;
+```
+Explanation:
+In this example, `/w3schools/i` is a regular expression where `w3schools` is the pattern for search, and `i` is a modifier indicating case insensitivity.
+
+In another scenario, if we have a sentence: "The dog chased the cat." and we want to match the pattern "the", we can use the regex `/the/`.
+
+```javascript
+let sentence = "The dog chased the cat.";
+let regex = /the/;
+```
+Notice how `/the/` indicates the pattern we're searching for in the sentence. 
+
+To determine if a pattern exists in a string, we use the `test()` method:
+
+```javascript
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString); // Result will be true
+```
+Let's consider finding "Waldo" in a text:
+
+```javascript
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/;
+let result = waldoRegex.test(waldoIsHiding); // Result will be true
+```
+Note that `waldoRegex` is case-sensitive, so `/Waldo/` returns true, whereas `/waldo/` would return false.
+
+## Day 3
+
+### JavaScript Forms
+--------------------
+
+**JavaScript Methods and “this” Keyword**
+
+In JavaScript, objects can include functions, known as methods. A method is essentially a property of an object that holds a function value. Accessing object methods is done using dot notation, where you call the object name followed by the method key along with parentheses. Similarly, you can add methods to objects by defining them within the object's declaration.
+
+JavaScript offers numerous built-in methods for various tasks. For instance, the `parseInt()` method of the Number object converts a numeric string to an integer value. You can also add methods to objects after their creation, as demonstrated by adding the `greet` method to the `student` object in an example.
+
+When accessing properties within an object's method, the `this` keyword is used to refer to the object itself. It allows the method to access and manipulate the object's properties effectively. However, functions inside objects can also access their variables similar to regular functions.
+
+Example:
+```javascript
+let person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+  }
+};
+console.log(person.greet()); // Output: Hello, my name is John and I am 30 years old.
+```
+
+**JavaScript Switch Statement**
+
+The switch statement in JavaScript is employed to execute different actions based on varying conditions. It allows for the selection of one of multiple code blocks to execute. The syntax involves evaluating a switch expression once and comparing its value with each case's values. If a match is found, the associated block of code executes; otherwise, the default code block executes. 
+
+For instance, the `getDay()` method returns the weekday as a number between 0 and 6, where Sunday is 0 and Saturday is 6. By using a switch statement with `getDay()`, you can determine the weekday name. 
+
+```javascript
+let day;
+switch (new Date().getDay()) {
+  case 1:
+    day = "Monday";
+    break;
+  // additional cases for other weekdays...
+  default:
+    day = "Unknown";
+}
+```
+
+The `break` keyword is used to exit the switch block once a match is found, preventing further execution. If no case matches the switch expression, the `default` keyword specifies the code to run. It's worth noting that the `default` case doesn't have to be the last one.
+
+When multiple cases match a case value, the first one encountered is selected. If no matching cases are found, the program proceeds to the default label. If there's no default label, the program continues to the statements after the switch.
+
+Switch cases employ strict comparison (===), meaning values must be of the same type to match. If the operands aren't of the same type, no match occurs.
+
+Example exercise:
+```javascript
+let fruits = "apple";
+switch (fruits) {
+  case "banana":
+    alert("Hello");
+    break;
+  case "apple":
+    alert("Welcome");
+    break;
+  default:
+    alert("Unknown fruit");
+}
+```
+
+## Day 4
+
+### JavaScript Eve
+------------------
+
+**Built-In JavaScript Functions**
+
+In JavaScript, there are several built-in functions that are commonly used to perform various tasks. Let's explore some of these functions with examples:
+
+1. `document.write()`:
+   - The `document.write()` method allows you to output text or HTML content directly to the webpage.
+   - It's commonly used for quick testing or to dynamically generate content.
+   
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document.write() Example</title>
+</head>
+<body>
+    <script>
+        document.write("Hello, World!");
+    </script>
+</body>
+</html>
+```
+Output:
+```
+Hello, World!
+```
+
+2. `window` Object Methods:
+
+   - **`alert()`:** Displays an alert dialog box with the specified message and an OK button.
+   - **`confirm()`:** Displays a dialog box with a specified message, along with OK and Cancel buttons.
+   - **`prompt()`:** Displays a dialog box that prompts the user for input.
+   - **`open()`:** Opens a new browser window.
+   - **`close()`:** Closes the current browser window.
+   - **`setTimeout()`:** Executes a function or specified code after a specified delay.
+
+Example (Using `confirm()` and `alert()`):
+```javascript
+// Using confirm() method
+var result = confirm("Do you want to proceed?");
+if (result === true) {
+    alert("You clicked OK!");
+} else {
+    alert("You clicked Cancel!");
+}
+```
+In this example, a confirmation dialog is displayed, and based on the user's response, an alert is shown accordingly.
+
+Remember, for `prompt()`, `open()`, `close()`, and `setTimeout()`, you can experiment by implementing them in your own scripts to see how they work.
+
+
+**Methods of the Document Object**
+
+The Document Object in JavaScript provides several methods to interact with and manipulate the contents of an HTML document. Let's explore some of these methods along with examples:
+
+1. `write("string")`:
+   - Writes the given string directly onto the document.
+   - It's used to dynamically add content to the page.
+   
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>write() Method Example</title>
+</head>
+<body>
+    <script>
+        document.write("This text is dynamically added to the document.");
+    </script>
+</body>
+</html>
+```
+
+2. `writeln("string")`:
+   - Writes the given string onto the document with a newline character at the end.
+   - Similar to `write()` but adds a newline after the specified string.
+   
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>writeln() Method Example</title>
+</head>
+<body>
+    <script>
+        document.writeln("This text is dynamically added to the document with a newline.");
+        document.writeln("Next line.");
+    </script>
+</body>
+</html>
+```
+
+3. `getElementById()`:
+   - Returns the element with the specified id attribute.
+   
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementById() Method Example</title>
+</head>
+<body>
+    <div id="myDiv">This is a div element with id="myDiv"</div>
+    <script>
+        var element = document.getElementById("myDiv");
+        console.log(element.textContent); // Output: This is a div element with id="myDiv"
+    </script>
+</body>
+</html>
+```
+
+4. `getElementsByTagName()`:
+   - Returns a collection of elements with the specified tag name.
+   
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByTagName() Method Example</title>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <script>
+        var listItems = document.getElementsByTagName("li");
+        console.log(listItems.length); // Output: 2
+    </script>
+</body>
+</html>
+```
+
+5. `getElementsByClassName()`:
+   - Returns a collection of elements with the specified class name.
+   
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByClassName() Method Example</title>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <script>
+        var boxes = document.getElementsByClassName("box");
+        console.log(boxes.length); // Output: 2
+    </script>
+</body>
+</html>
+```
+
+These examples demonstrate how to use various methods of the Document Object to interact with HTML elements within a webpage.
