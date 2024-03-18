@@ -740,3 +740,38 @@ Example:
 ```
 
 These examples demonstrate how to use various methods of the Document Object to interact with HTML elements within a webpage.
+
+## Day 5
+
+### Reflections
+---------------
+
+**Reflections on Week 2:**
+
+During Week 2, I delved deeper into JavaScript concepts, particularly focusing on type conversions, the Document Object Model (DOM), functions, operators, regular expressions, JavaScript forms, built-in JavaScript functions, and methods of the Document Object. Here's a recap of what I've learned and how I applied these concepts:
+
+1. **Type Conversions:*
+   - I learned about automatic and explicit type conversions in JavaScript for strings, numbers, and booleans. 
+   - Applying these concepts involved understanding when and how to convert data types explicitly to handle different scenarios effectively.
+
+2. **Document Object Model (DOM):*
+   - Understanding the DOM's structure and common methods enabled me to manipulate HTML documents dynamically using JavaScript.
+   - I applied the dot syntax to access elements within the DOM hierarchy, utilizing methods like `getElementById()` and `getElementsByTagName()`.
+
+3. **Functions and Operators:*
+   - I explored the creation and invocation of functions, including nested functions and methods of creating objects with user-defined functions.
+   - Learning about various types of operators, such as arithmetic, comparison, and logical operators, helped me perform different operations efficiently.
+
+4. **Regular Expressions:*
+   - Regular expressions allowed me to define search patterns in text operations, enhancing my ability to work with textual data effectively.
+   - I practiced using regular expressions to search for patterns within strings and understand their application in practical scenarios.
+
+5. **JavaScript Forms:*
+   - Learning about JavaScript methods and the `this` keyword provided insights into object-oriented programming in JavaScript.
+   - I gained proficiency in utilizing switch statements to execute different code blocks based on varying conditions.
+
+6. **Built-In JavaScript Functions and Document Object Methods:*
+   - Exploring built-in functions like `alert()`, `confirm()`, and `document.write()` empowered me to interact with users and dynamically modify webpage content.
+   - Understanding Document Object methods like `getElementById()` and `getElementsByTagName()` enabled me to manipulate HTML elements efficiently within a webpage.
+
+Overall, Week 2 deepened my understanding of JavaScript fundamentals and provided practical insights into leveraging JavaScript to enhance webpage interactivity and functionality. By applying these concepts through examples and exercises, I honed my skills in JavaScript programming and gained confidence in building dynamic web applications.
