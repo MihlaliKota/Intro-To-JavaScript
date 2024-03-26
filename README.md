@@ -887,3 +887,51 @@ Understanding keyboard events and their associated event handlers is crucial for
 3. *Keypress Event (onkeypress):* The keypress event triggers when a key press results in a character value. Not all keys trigger this event; for example, special keys like Ctrl or Shift won't generate a keypress event but will still trigger keydown and keyup events. It's handled using the `onkeypress` event handler, and an example showcases alert message display upon keypress.
 
 Understanding and utilizing these keyboard events and their associated event handlers empower developers to create more dynamic and responsive web applications.
+
+**Form Events**
+
+Form events play a vital role in web development, as they respond to user interactions with form controls like text inputs, select boxes, and more. These events trigger when a control receives or loses focus, or when a user modifies a control's value.
+
+Four key form events and their event handlers are highlighted:
+
+1. *Focus Event (onfocus):* This event fires when a user gives focus to an element. It's handled using the `onfocus` event handler. An example demonstrates highlighting a text input's background in yellow when it receives focus.
+
+2. *Blur Event (onblur):* Occurring when a user removes focus from a form element or window, the blur event is managed using the `onblur` event handler. An example showcases displaying an alert message when a text input loses focus.
+
+3. *Change Event (onchange):* When a user alters a form element's value, the change event is triggered. It's controlled with the `onchange` event handler. An example illustrates showing an alert message upon changing an option in a select box.
+
+4. *Submit Event (onsubmit):* Exclusive to form submissions, the submit event occurs when a user submits a form. It's handled using the `onsubmit` event handler. An example depicts displaying an alert message when submitting a form to the server.
+
+Understanding and utilizing these form events and their handlers empower developers to create more interactive and user-friendly web forms.
+
+**Document/Window Events**
+
+Apart from user interactions, events in web development also encompass scenarios like page loading and browser window resizing. These document/window events trigger specific actions and can be controlled using event handlers.
+
+Three significant document/window events and their event handlers are highlighted:
+
+1. **Load Event (onload):** This event fires when a web page finishes loading in the browser. It's managed using the `onload` event handler. An example demonstrates displaying an alert message once the page completes loading.
+
+```javascript
+window.onload = function() {
+    alert('Page loaded successfully!');
+};
+```
+
+2. **Unload Event (onunload):** Occurring when a user navigates away from the current page, the unload event is handled using the `onunload` event handler. An example showcases triggering an alert message when attempting to leave the page.
+
+```javascript
+window.onunload = function() {
+    alert('Are you sure you want to leave this page?');
+};
+```
+
+3. **Resize Event (onresize):** When a user resizes the browser window, the resize event is triggered. It also occurs when the window is minimized or maximized. Managed with the `onresize` event handler, an example displays an alert message upon resizing the browser window to a new width and height.
+
+```javascript
+window.onresize = function() {
+    alert('Browser window resized!');
+};
+```
+
+Understanding and utilizing these document/window events and their associated handlers is essential for creating dynamic and responsive web applications.
