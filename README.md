@@ -996,3 +996,33 @@ https://www.freecodecamp.org/news/a-beginners-guide-to-website-optimization-2185
 
 In this article by Mario Hoyos, he shares his experience optimizing images on his website, achieving an impressive 99/100 in Google’s optimization ranking. As a beginner web developer, Mario initially overlooked the impact of images on page load times. However, he realized the importance of image optimization, primarily through compression. Mario used Optimizilla, a user-friendly online tool, to compress images, noting significant size reductions of up to 70%. He suggests alternative tools such as ImageOptim for Mac or FileOptimizer for Windows, or using plugins like Gulp and WebPack for compression during build processes. Mario also discusses the choice between JPEG and PNG formats based on transparency needs, highlighting Google’s webp format for future consideration. For video optimization, Mario recommends platforms like Vimeo, YouTube with the youtube-dl tool, or services like Brightcove, Sprout, or Wistia for professional hosting and optimization.
 
+**General Website Optimization**
+
+From the previous article, the author discusses additional ways to optimize websites beyond image compression. 
+
+1. **Gzip Compression:** The author explains gzip compression, a method to reduce file sizes transmitted over the internet. Although some hosting services offer gzip options, others require manual implementation using compression middleware in server-side code.
+
+2. **Minification:** Minification involves removing unnecessary characters from code to reduce file size without affecting functionality. While build tools like Webpack or Gulp can handle minification, simpler alternatives like HTML-Minifier, CSSNano, and UglifyJS are recommended by Google.
+
+3. **Browser Caching:** Storing static files in the browser cache can significantly speed up website loading times, especially for returning visitors. The author demonstrates how to add cache-control headers to HTTP responses using Node/Express servers.
+
+4. **Content Distribution Network (CDN):** CDNs improve website performance by distributing content across multiple proxy servers worldwide, reducing load times for users regardless of location. Popular CDNs include CloudFront and CloudFlare.
+
+5. **Miscellaneous Tips:** The author offers additional optimization tips, such as lazy-loading images to prioritize above-the-fold content and loading script tags at the bottom of HTML files to improve time-to-interactive.
+
+In conclusion, the author emphasizes the importance of measuring website performance and addressing specific bottlenecks rather than applying generic optimizations. Each website may require unique optimization strategies based on its traffic and service requirements.
+
+**Search Engine Optimization**
+
+https://moz.com/beginners-guide-to-seo/why-search-engine-marketing-is-necessary
+
+This article delves into the basics of Search Engine Optimization (SEO) provided by moz.com, focusing on understanding how search engines work, identifying organic search results, and highlighting the importance of SEO.
+
+Search Engine Basics: Search engines function as answer machines, evaluating numerous factors to determine the relevance of content to user queries. They achieve this through crawling, indexing, and ranking web content.
+
+Organic Search Results: Organic search results are earned through effective SEO and are distinguished from paid advertising. Today's search engine results pages (SERPs) include various formats, such as featured snippets, People Also Ask boxes, and local packs, driven by user intent.
+
+Significance of SEO: While paid advertising and social media can drive website traffic, organic search results occupy more digital real estate, appear credible to users, and receive more clicks. SEO offers substantial traffic opportunities compared to pay-per-click (PPC) advertising and can yield long-term benefits with continuous traffic growth.
+
+Role of SEO: SEO helps optimize websites to provide relevant information to search engines for proper indexing and display in search results. By understanding how search engines work and implementing effective SEO strategies, websites can attract more organic traffic and improve their online visibility.
+
