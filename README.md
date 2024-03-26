@@ -871,6 +871,19 @@ JavaScript provides methods like `getTime()` to retrieve timestamps and various 
 
 Understanding how JavaScript handles dates is crucial for developers as it involves managing timestamps and date strings effectively for different applications and functionalities.
 
+## Day 3
 
+### Keyboard, Form, and Document/Window Events 
+----------------------------------------------
 
+**Keyboard Events**
 
+Understanding keyboard events and their associated event handlers is crucial for interactive web development. Three primary keyboard events are highlighted: keydown, keyup, and keypress.
+
+1. *Keydown Event (onkeydown):* This event triggers when a user presses a key. It's handled using the `onkeydown` event handler. An example demonstrates triggering an alert message upon keydown.
+
+2. *Keyup Event (onkeyup):* This event occurs when a user releases a key. It's managed using the `onkeyup` event handler. An example illustrates displaying an alert message upon keyup.
+
+3. *Keypress Event (onkeypress):* The keypress event triggers when a key press results in a character value. Not all keys trigger this event; for example, special keys like Ctrl or Shift won't generate a keypress event but will still trigger keydown and keyup events. It's handled using the `onkeypress` event handler, and an example showcases alert message display upon keypress.
+
+Understanding and utilizing these keyboard events and their associated event handlers empower developers to create more dynamic and responsive web applications.
