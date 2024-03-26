@@ -775,3 +775,65 @@ During Week 2, I delved deeper into JavaScript concepts, particularly focusing o
    - Understanding Document Object methods like `getElementById()` and `getElementsByTagName()` enabled me to manipulate HTML elements efficiently within a webpage.
 
 Overall, Week 2 deepened my understanding of JavaScript fundamentals and provided practical insights into leveraging JavaScript to enhance webpage interactivity and functionality. By applying these concepts through examples and exercises, I honed my skills in JavaScript programming and gained confidence in building dynamic web applications.
+
+# Week 3
+
+## Day 1
+
+### JavaScript Events
+---------------------
+
+**Strings Operations**
+
+Strings in JavaScript can be created as primitives, from string literals, or as objects using the `String()` constructor. String primitives and objects can be used interchangeably in most cases. String literals can be enclosed in single or double quotes, or using backticks for template literals that allow expression interpolation.
+
+Accessing individual characters in a string can be done using the `charAt()` method or by treating the string as an array-like object with numerical indices. When using bracket notation for character access, properties are not writable or configurable.
+
+In JavaScript, string comparison can be done using the less-than and greater-than operators or the `localeCompare()` method for more complex comparisons. JavaScript distinguishes between String objects and primitive string values, automatically converting primitives to objects when needed.
+
+When using `eval()`, primitives are treated as source code while String objects are treated like other objects. Authors should be aware of potential issues when expecting primitive strings but encountering String objects, although conversion is possible using the `valueOf()` method.
+
+**On-event Handlers**
+
+On-event handlers in DOM elements are properties that manage how elements respond to events like clicks, key presses, or focus changes. These handlers are named according to the event they handle, such as onclick or onkeypress.
+
+You can set event handlers using HTML attributes like `onclick="return handleClick(event);"`, or by setting properties in JavaScript like `document.getElementById("mybutton").onclick = function(event) { ... }`. Each object can have only one on-event handler per event, but you can use `addEventListener()` to add multiple independent handlers.
+
+Event handlers are automatically called when events occur, and they can be assigned real handler functions. Parameters like `event` are passed to handlers, and the `this` keyword refers to the element the handler is registered on. The return value from a handler can determine if the event is canceled.
+
+When discussing event handling, an event listener is set up using `addEventListener()`, while an event handler typically refers to functions registered via on-attributes or properties. `addEventListener()` adds a function or object implementing `EventListener` to the list of event listeners for a specific event type on the target element.
+
+In summary, on-event handlers provide a way to manage how elements respond to events, offering flexibility and control over event-driven interactions in web development.
+
+**Event handlers specific rules**
+
+Event handlers in HTML elements, Document, and Window objects have specific rules for support across different elements and objects. These event handlers can be used as both content attributes and IDL attributes.
+
+onabort: Triggered when an event is aborted, like when media data fetching is stopped prematurely.
+oncanplay: Fired when media can start playing but is still buffering.
+oncanplaythrough: Indicates media can play continuously without further buffering.
+onchange: Activated when a user changes an object and moves away from it.
+onclick: Responds to a user clicking on an object.
+ondblclick: Fired when a user double-clicks on an object.
+ondurationchange: Triggered when the media length changes.
+onended: Activated when media playback reaches the end.
+oninput: Responds to user input.
+onkeydown, onkeypress, onkeyup: Fired on key press events.
+onloadeddata, onloadedmetadata: Indicate when media data can be rendered or when media dimensions are determined.
+onmousedown, onmouseup: Respond to mouse button presses and releases.
+onmouseenter, onmouseleave: Fired when the cursor enters or leaves an element.
+onmousemove, onmouseout, onmouseover: Respond to mouse movements over elements.
+onmousewheel: Triggered when the mouse wheel is rotated.
+onpause, onplay, onplaying: Events related to media playback.
+onprogress: Indicates media data fetching progress.
+onreset: Fired when a form is reset.
+onseeked, onseeking: Events related to seeking in media playback.
+onselect: Activated when content is selected.
+onsubmit: Fired when a form is submitted.
+onsuspend: Indicates media data fetching is suspended.
+ontimeupdate: Fired when media playback position changes.
+ontoggle: Triggered when a details element is opened or closed.
+onvolumechange: Responds to changes in volume or mute status.
+onwaiting: Indicates the next media frame is not yet available.
+
+These event handlers provide a way to manage various interactions and behaviors in web development, offering a range of options for handling user actions and media playback events.
