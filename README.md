@@ -837,3 +837,23 @@ onvolumechange: Responds to changes in volume or mute status.
 onwaiting: Indicates the next media frame is not yet available.
 
 These event handlers provide a way to manage various interactions and behaviors in web development, offering a range of options for handling user actions and media playback events.
+
+## Day 2
+
+### Dynamic JavaScript Techniques
+---------------------------------
+
+**Dynamic HTML**
+----------------
+
+CSS and JavaScript can be integrated with HTML to create dynamic web pages known as dynamic HTML. Events can drive changes on a website, ranging from simple text formatting to dynamic content updates and object movements.
+**Changing HTML Objects:*
+Objects in HTML can be altered in two main ways:
+By modifying the class of the object to adjust its style.
+Using the object's style property directly to change its appearance.
+
+**Designing JavaScript Functions:*
+JavaScript functions can be designed in various ways:
+Directly referencing an object in the function using its ID to modify its style exclusively.
+Passing an object's ID as an argument to the function for flexible style changes.
+Accessing objects based on events to identify the object involved in the event occurrence. 
