@@ -935,3 +935,64 @@ window.onresize = function() {
 ```
 
 Understanding and utilizing these document/window events and their associated handlers is essential for creating dynamic and responsive web applications.
+
+# Week 4
+
+## Day 1
+
+### Program Flowcharts, Loops and Decision structures 
+-----------------------------------------------------
+
+**Program Flowcharts**
+
+After analyzing a problem or opportunity, designing the program to solve it is essential. This design process results in a program flowchart, illustrating the program's logic and data manipulation. Flowcharts are crucial as they allow for easier determination, arrangement, and modification of complex logic compared to correcting errors in implemented programs. They facilitate easy maintenance and efficient modifications of programs.
+
+*Program Flowchart Symbols:*
+Program flowcharts utilize standardized symbols, simplifying comprehension and maintenance by individuals other than the original programmer. These symbols represent various program elements and logic. Watching a video to familiarize oneself with these symbols aids in understanding program flow.
+
+Moving forward, the implementation of critical elements within the program flowchart will be explored in the upcoming section.
+
+*Best Practices for Flowcharts:*
+Although you may desire to enhance the visual appeal of your program flowchart, it's recommended to adhere to standardized symbols. However, you can still add visual interest by incorporating different colors for symbols and labels. When creating program flowcharts, consider the following points:
+
+1. Utilize appropriate symbols to represent different elements of the program logic.
+2. Ensure consistent flow direction throughout the flowchart to maintain clarity.
+3. Use color schemes or color coding to enhance visual understanding, but avoid overuse or excessive complexity.
+4. Maintain consistent sizes for symbols to promote uniformity and readability.
+5. Maintain consistent spacing between symbols to enhance the overall organization and clarity of the flowchart.
+
+**JavaScript For Loop**
+
+Now that we have a grasp of flowcharts, let's delve into loops. Loops are instrumental in executing a block of code repeatedly, particularly useful when working with arrays. Instead of manually writing repetitive code to iterate through an array, loops streamline the process. JavaScript offers various types of loops:
+
+1. **for**: Executes a block of code a specified number of times.
+2. **for/in**: Loops through the properties of an object.
+3. **for/of**: Loops through the values of an iterable object.
+4. **while**: Executes a block of code while a condition is true.
+5. **do/while**: Similar to while loop but ensures that the code block is executed at least once.
+
+The syntax for a for loop is as follows:
+
+```javascript
+for (statement1; statement2; statement3) {
+  // code block to be executed
+}
+```
+
+- Statement1: Executed once before the loop starts.
+- Statement2: Defines the condition for executing the code block.
+- Statement3: Executed after the code block has been executed on each iteration.
+
+You can customize the initialization, condition, and iteration parts of the loop based on your requirements. These parts are optional and can be omitted if not needed. The flexibility of JavaScript allows for various configurations within the loop structure, making it versatile for different programming scenarios.
+
+## Day 2
+
+### Website and Search Engine Optimization and Game Development 
+---------------------------------------------------------------
+
+**Image and Video Optimization**
+
+https://www.freecodecamp.org/news/a-beginners-guide-to-website-optimization-2185edca0b72/
+
+In this article by Mario Hoyos, he shares his experience optimizing images on his website, achieving an impressive 99/100 in Google’s optimization ranking. As a beginner web developer, Mario initially overlooked the impact of images on page load times. However, he realized the importance of image optimization, primarily through compression. Mario used Optimizilla, a user-friendly online tool, to compress images, noting significant size reductions of up to 70%. He suggests alternative tools such as ImageOptim for Mac or FileOptimizer for Windows, or using plugins like Gulp and WebPack for compression during build processes. Mario also discusses the choice between JPEG and PNG formats based on transparency needs, highlighting Google’s webp format for future consideration. For video optimization, Mario recommends platforms like Vimeo, YouTube with the youtube-dl tool, or services like Brightcove, Sprout, or Wistia for professional hosting and optimization.
+
