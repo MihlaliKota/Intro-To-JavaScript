@@ -1225,3 +1225,137 @@ Aside from its widespread adoption, React's appeal stems from the enjoyable user
 
 ![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/8ea6b515-f247-46ce-8bba-5a98d9744d04)
 
+## React Elements
+-----------------
+
+**React Elements**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/8f882c94-42ea-40d4-954a-5da134f2888c)
+
+Now that VS Code is set up and running, let's focus on our React project. You'll start by dragging the exercise files folder onto the VS Code icon in your dock to locate the starting file, located in the "02_01 start" folder. Inside the index.html file, you'll find some script tags in the head section. To quickly integrate React into the page, links to the React CDN have been added. This serves as a fast lane to load the entire React library into the browser. The CDN links for React and React DOM are crucial; React covers our needs, and React DOM helps incorporate React into the page efficiently.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/9fac8b01-0574-4cbb-aaf9-04c460393d64)
+
+Think of these links as a quick way to preload all the functions and features of React. Once they're added, we can begin creating our first React element. To view the file in the browser, simply minimize it, drag the index.html, and open it in a new tab. Once that's done, you can have both screens side by side for easy reference.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/a8a69aa7-f394-42b1-9555-e20eba5884ec)
+
+In React, we don't create elements directly in HTML; we use JavaScript instead. We can start by creating a div in the body with an ID of "root," which is typically where our React code goes in a project. Next, we add a script tag with the type "text/javascript" and write "ReactDOM.render." This function, which is essential in the ReactDOM library, takes two arguments.
+
+Firstly, "React.createElement" is used to create the element we want. For example, to replicate an h1 element with React, we write "h1," null (no additional properties), and "getting started with React."
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/f0f54800-bf9b-4779-ad06-f4f729a8a871)
+
+The second argument indicates where to position the element - in this case, "document.getElementById('root')." This instruction essentially means, "Render this element and place it inside the 'root' div." After saving and refreshing, voila! Our first React element has been successfully created.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/09aff072-6054-457a-9fa4-938c16fbd882)
+
+**Creating React Elements**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/1eae3c60-e678-4c2d-9048-f742c1477b00)
+
+We're currently using the ReactDOM.render function to insert the createElement call from line 19 into the document at the 'root' element. In essence, we're finding that element on the page and injecting our React code into it. When working with React, it's beneficial to see these elements as small UI components that can be displayed whenever required.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/68faa1bc-e7a4-4834-a9a4-783ffeb62faa)
+
+The concept here is to convert this into a variable. Rather than nesting all these functions within another function, let's remove this entire section and paste it elsewhere. Then, on line 24, we'll add 'heading,' and it should operate in the same manner. Now, let's adjust the text of 'Getting Started with React,' adding a couple of exclamation marks to test if it's working properly. And it is. This method allows us to create a React element using its designated variable.
+
+**Refactoring elements using JSX**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/65fc35d4-8d2c-496a-8275-13f97f8fb76d)
+
+Okay, let's change our heading into a bulleted list. To do this, we'll convert it into an unordered list (ul) using React.createElement, and to add list items, we just need to adjust the third argument.
+
+Consider this as the directions for what we're building. For example, we can include style: color, blue to give it a stylish shade. Now, let's move on to the child elements. We'll begin with a list item, null, and Monday. It's straightforward. Adding more days is simple - Monday, Tuesday, Wednesday, and we're good to go.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/c83c023f-3d87-4c55-86bf-d39f9a2dd883)
+
+As we incorporate more createElement calls to enhance our UI, our code becomes somewhat chaotic. Here comes JSX, our superhero helper. It's like HTML but within JavaScript. Instead of dealing with a jungle of createElement functions, we simply use tags. Think of creating a fun emoji list with robots and cowboys. Sounds easy, doesn't it? Well, almost. However, when we try to execute it, we hit a snag at line 20. React doesn't mesh well with JSX tags. But no need to fret! In the next video, we'll introduce Babel to tackle this obstacle.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/0914139d-a36f-4749-b14f-d6e771d8d7bb)
+
+**Incorporating Babel**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/2a01a332-76c0-4799-bd54-c8fe038248f4)
+
+As we're working on these HTML files, I want to give you a heads-up. If you're switching between different files, use the search bar and replace "0203" with "0204." Got it? Now, even though we've moved to a new video with a new file, that annoying unexpected token error is still persisting.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/e5adcc63-5d7c-489f-843e-77bf9ab5381d)
+
+Why? Because JSX, the tag-based syntax we're using, isn't compatible with browsers. So, what's the solution? We take this code, test it, and use a compiler tool. Head over to babeljs.io, click on "try it out," and there you have it! It converts your code into something that browsers can handle. No need to stress over complex, hard-to-read stuff. Keep it sleek with that fantastic tag-based syntax.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/75186685-e5aa-47fc-9a6b-b0a75f7f25e8)
+
+To expedite the process, grab a CDN link. Give this one a shot: unpkg.com/babel-standalone@6/babel.min.js. The '.min' extension indicates that it's optimized for quicker browser performance. Oh, and don't forget to change 'text/javascript' to 'text/babel' to address any syntax errors. Babel is the hero here, not just for JSX, but for all the awesome new JavaScript features. It's a quick start, not the most optimized, but later on, we'll explore more tools that handle this process before it reaches the browser.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/bfa58416-08a2-4077-ba16-ca9f6c849728)
+
+**JSX Syntax**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/4653be76-3a06-42b7-9bae-1184bb615a2e)
+
+When working with React and JSX, you'll realize the true power of JSX. It allows you to easily insert dynamic content into your tags by referencing them with variable names. Let me demonstrate this for you. Firstly, create a variable named "robot" and assign it the value of our robot. Then, create another variable for a cowboy, ensuring both are in strings. Additionally, let's define our friendly moon by setting "moon" equal to it. Now, within our list, use curly braces to display these values in list items. This constitutes a JSX expression, and in this scenario, we're passing robot, cowboy, and moon. If you add another list item like this one: "let name = react," and plug in the name, you'll see "react" added to our list items. Remember, whenever you encounter a JSX expression with curly braces, you can incorporate various functions. For instance, try "toUpperCase()" to transform "react" into all caps, or use "name.length" to get the length of the property. JSX is a powerful tool for injecting dynamic content into your apps.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/bbea2b3e-ce27-40ae-a4a4-fba5f4873a59)
+
+## React Components
+-------------------
+
+**Building React Components**
+
+Now that we've mastered creating elements, let's explore building our first component. Imagine a component as a small building block, a user interface element representing a part of our application. First, let's say goodbye to our emoji helpers and remove the unordered list. Now, we're prepared to create our initial component, essentially a JavaScript function generating JSX.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/23d451bf-765a-43b9-9daa-6a0ae42766d6)
+
+Imagine we throw in a header like this:
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/e2b3c1e7-9e50-4719-a5b8-dfbc903c917b)
+
+To get it on our page, we call on ReactDOM.render. Now, JSX lets us not only create HTML elements but also render components.
+
+Onto the next adventure – let's toss in another component. Behold the mighty 'Main' function:
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/21e8c980-c121-407d-8870-1e8f4ac03572)
+
+Similar to our previous practice, we render it, and voila! "We serve the most delicious food around" proudly appears on our page.
+
+Now, here's a tip. You might feel inclined to directly combine the Header and Main components side by side. However, hold on! React requires a single component, so place them inside a div. Problem solved.
+
+But, there's an alternative approach. Let's create an App function to manage both the Header and Main. It looks something like this:
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/10d4cc80-8418-400d-82f7-5c7e04526eaf)
+
+Replace the div rendering with App, and there you go! Same result. So, keep in mind, a component is essentially a function generating JSX, and ReactDOM.render is your tool for making that component come alive in JSX style.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/ff5b8694-2483-40f7-9675-0f8baee57151)
+
+**Introducing Component Properties**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/4965d891-52f6-4058-8eb4-9136bc603d7f)
+
+In the earlier section, we assembled some components. Now, let's level up by using these components to display live data. Imagine our restaurant is flourishing, but seeing Eve’s name everywhere isn't ideal. You'd prefer to see your own name, which is understandable. Here's the plan: we'll introduce something called props into our header function. Before displaying anything, let's inspect what we receive by logging props to the console. Refresh the page, open your console, and you'll see an empty object. To populate it, head to where the component is rendered, like line 41, and add name equals followed by your name, let's say Cindy. Refresh again, and voila, an object with that name appears. Now, to utilize these values, simply extract them from the props object. For instance: {props.name}'s Kitchen. And there you have it - Cindy's kitchen in the mix.
+
+Now, let's take it up a notch. Our main component can join the fun too. While showcasing delicious food, why not make it {props.adjective} food? Insert adjective equals amazing in the main component, and it's instantly injected there. Add a period for style. One more thing - a new property for our footer component. This one's a game-changer. The footer returns a footer tag, and inside that, we're grabbing a copyright year from props. Scroll down a bit, place the footer inside the app component. So far, we've used strings for properties, right? But what if you wanted to use a number? Just wrap it in curly braces. Refresh, and you'll see it added. You can also enhance dynamism by adding a function like {new Date().getFullYear()}. That grabs the current year - pretty nifty.
+
+So, think of the props object as this handy container. Any information you want for a component, just toss it in there. When you're ready to showcase the component, pass those properties in, and inside the component, it's all about dot notation on the props object. Easy peasy, right?
+
+**Working with Lists**
+
+We've explored different ways of sending data to components, beginning with simple strings like "Cindy" and "amazing." Then, we utilized a handy date function and even passed a boolean, true or false. All of these are managed through JSX expressions, where only strings are enclosed in quotes. Now, what if we encounter a more complex data type, like an array?
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/38e6e8ae-9115-4d22-9c4b-46005b321ce6)
+
+Picture your restaurant menu, featuring dishes like Black Bean Soup, Macaroni and Cheese, and Salmon and Potatoes. Feel free to customize it with your favorite dishes. Now, let's showcase this menu in our main component by mapping over it. Collapse the footer and replace the paragraph with an unordered list. Inside, use the map function over the dishes array, returning a list item for each dish.
+
+Currently, the dishes variable points to a global const dishes. We can still display these values, but I want to access them through props. So, I'll pass the dishes via props, like dishes=dishes. Now, we can refer to props.dishes for the same output. Everything seems fine, but there's a console warning about needing a unique key property for each child in a list. We'll handle this in the next section.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/127babd6-3962-4e46-a86c-d62354c01407)
+
+**Applyings Keys to List Items**
+
+In the last section, we covered how to dynamically display a list of menu items. For instance, if a pizza is added to the list, it dynamically appears upon refreshing. However, a console warning reminded us about the importance of having a unique key property for each child in the list. This key property prevents synchronization issues during rendering, particularly when items are added at the front or in the middle. Consider the key as an ID ensuring proper synchronization.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/aed84052-efaa-474a-8422-a993abfe1831)
+
+Two methods were proposed to tackle this issue in JavaScript. Initially, using the index (i) as a key for each array item was suggested, but the React documentation warned against it due to potential rendering complications. The alternative involved transforming the data by creating an array of objects with unique IDs for each dish, which avoided rendering problems. The crucial point was to utilize dish.id instead of an index, ensuring data consistency. The significance of keys in preserving data synchronization during dynamic value iteration was highlighted.
+
