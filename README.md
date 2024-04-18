@@ -1410,3 +1410,130 @@ Understanding destructuring in JavaScript is crucial for effectively handling st
 
 This concept of destructuring also applies to arrays. For example, creating an array of cities allows us to extract values using array indexing. However, unlike object destructuring, we can't assign variable names based on keys. Instead, we utilize array destructuring to assign names to values based on their positions in the array, like "first city" or "second." This enables us to access specific values like "Tokyo" or "Tahoe City" easily. Mastery of both object and array destructuring is essential for our upcoming lessons.
 
+**The useState Hook**
+
+In React applications, managing state efficiently is vital, and the preferred approach for handling state variables is using the useState function. Here's how it operates: Begin by importing useState from React, replacing the previously employed destructured array. On line five, we utilize the 'what' value to examine what useState yields. Upon refreshing, we notice an array containing an undefined value and a function. The undefined value signifies the initial state when the app is initially rendered, while the function is utilized for updating the state.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/9ec636ed-290d-4c73-8df3-e85f273f38f2)
+
+To establish an initial state, assign a value to useState. For instance, setting the initial state to 'happy' generates a value named 'emotion' and a function for updating it named 'setEmotion.' By presenting the current emotion in an h1 tag, we can effortlessly alter it by invoking setEmotion with a new state, such as 'sad.' Integrating an onClick event to a 'sad' button triggers the state transition, updating the emotion accordingly.
+
+This technique offers flexibility; it can accommodate various emotions like 'excited.' The fundamental principle is recognizing that the initial value provided to useState represents the state when the application is initially rendered, and subsequent calls to setEmotion modify the application's state. Thus, whether it's a string, boolean, object, or array, this method enables dynamic state management across the application.
+
+**Working with useEffect**
+
+In the React ecosystem, there's a valuable tool called useEffect, akin to a hidden gem within the library. It may seem complex initially but proves immensely beneficial. Consider scenarios where activities within a component aren't directly tied to rendering, such as logging messages, fetching data, or managing animations — this is where useEffect excels.
+
+Let's explore it through a straightforward example involving a console log. Start by importing useEffect from React and incorporating it into your app component. Instead of supplying an array, pass in a function. For example, logging the current emotion demonstrates a side effect — it operates independently of rendering, executing alongside it.
+
+Check this out: If you click, emotions change, useEffect fires. Refresh, happy; click, excited; click again, sad. It reacts to changes in the 'emotion' array. Next time, we will tweak this even more and get cozy with the dependency array. 
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/aa39f87c-c193-49d4-8ab9-36f5a4542f04)
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/ef7586b1-9f95-40d0-9994-f4c24960eace)
+
+Check this out— click, emotions change, useEffect fires. Refresh, happy; click, excited; click again, sad. It reacts to changes in the 'emotion' array. Cool, right? Next time, we will tweak this even more and get cozy with the dependency array. 
+
+**The Dependency Array**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/93ba6726-9cb8-48a6-a259-82fc6d940314)
+
+With useEffect and useState calls, you can effectively manage various variables. Start by creating a secondary variable named "emotion" with an initial state of "tired" using useState. Introduce a button to initiate a change in the primary emotion and showcase the current secondary emotion. Utilize useEffect to handle different emotions, ensuring to include a dependency array to track changes accurately. Without this array, the console will consistently log "tired" for every emotion change. To specify which state variables trigger useEffect, include them in the dependency array. Thus, remember the significance of the dependency array when employing useEffect.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/c98a219f-f82f-4a0c-b494-d58143e12afe)
+
+**Using the useReducer**
+
+We're moving away from useEffect and focusing on simplifying our state management with useState. To clean things up, we'll replace useEffect with a checkbox that works smoothly alongside useState. Remove the clutter of state management and enhance our return statement by adding a checkbox enclosed within a div. The checkbox will have a type of, you guessed it, checkbox. Additionally, add a label, perhaps one casually labeled "checked" for now. Let's create a variable named "checked" along with its partner "setChecked," both using useState, initially set to false.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/ea625e7c-7c07-481f-b430-f9c531751f12)
+
+The "checked" variable acts as the controller for the checkbox state, dictating its behavior. We'll leverage its value for dynamic changes. When the checkbox is manipulated, we'll trigger the onChange event. This event will communicate with setChecked, altering the checked state accordingly. Based on the value of checked, the label will reflect its status - if checked is true, it will display "checked"; otherwise, it will show "not checked." Initially, checked is set to false. Toggle this, and you'll see a smooth method of managing our checkbox using useState.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/379eee54-035d-4a2c-a094-8fb0b1e05001)
+
+Let's enhance our approach further. It's time to refine our solution. What if we could delegate this functionality to a separate function instead of managing it all within onChange? It's makeover time! Introducing a new contender: useReducer. This function requires two companions: the state-updating handler function and the initial state. We insert these, save the day, and now our onChange function only needs the handler function name for state updates - that's "setChecked." All set? Great. With the state update function and initial state in place, the output remains just as impressive, but the beauty lies in reducing the clutter of extra onChange code. This ensures that whenever we call the setChecked function, it performs consistently, avoiding those pesky bugs.
+
+## React Forms
+--------------
+
+**Working with Uncontrolled Components**
+
+When developing in React, managing form inputs is a crucial aspect. While we're currently focusing on a checkbox, let's broaden our scope and set up our inaugural React form utilizing the useRef hook. This handy hook empowers us to interact with individual elements such as text and color inputs. By assigning refs to these inputs, like txtTitle and hexColor, we gain access to their values through the current property. This enables us to establish an uncontrolled component, where changes in the form don't automatically trigger a re-render; instead, we manually fetch values when necessary. Think of the useRef hook as a detective, always ready to retrieve the current value of an input.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/bd9ab2e3-79c5-4907-a7c8-8b198ef52a52)
+
+**Creating Controlled Form Elements**
+
+Alternatively, we can handle forms using state, shifting from uncontrolled to controlled components. We'll discard the useRef approach and instead establish state variables (such as title and color), linking them to our input values. Through onChange events, we'll dynamically update these states. Consequently, our form becomes controlled, leveraging the capabilities of state to oversee form elements. Every interaction with an input now directly affects state variables, transforming the form into a controlled component.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/4db02520-f78e-4107-beb8-ac188f430b85)
+
+**Building a Custom Hook**
+
+React hooks offer the opportunity to develop custom hooks tailored to different functionalities. Consider a form with recurring actions like inputting and clearing values. We can craft a custom hook, named useInput, utilizing useState. This hook outputs an array containing the state value and an onChange function. Integrating this hook into our form simplifies its organization. Consequently, user input management transforms into a reusable and adaptable custom hook. Hooks serve as versatile tools in a developer's arsenal, facilitating the creation of efficient and tidy code across projects.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/15a7bf60-4ed6-48ca-ae88-311978e37521)
+
+**Choosing a Form Library**
+
+Custom hooks provide flexibility, but several form libraries can streamline form handling tasks. Formik, found at formik.org, offers comprehensive form management capabilities. React Hook Form is another robust choice, offering features like validation and strong TypeScript support. If you're curious about exploring different hooks, usehooks.com provides a wealth of resources and "recipes" for crafting various types of hooks. These libraries and resources serve as assistants, simplifying form-related operations and enabling us to select tools that align with our project requirements.
+
+## Asynchronous React
+---------------------
+
+**Fetching Data with Hooks**
+
+To fetch real-time data from the GitHub API with React, combine the useState and useEffect hooks. Begin by establishing a data container named 'data' along with a corresponding function, 'setData', initially set to 'null'. Then, utilize useEffect to send an HTTP request to the GitHub API, fetching data for a specific user (e.g., 'api.github.com/users/yourUserID'). Manage the response using the '.JSON' method and update the data state using 'setData'. Ensure that you specify an empty array as the dependency for useEffect to retrieve the data only once during the initial rendering. If the fetched data exists, display it within a pre-formatted tag.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/57e239ef-9cba-4907-8969-8ccb0e2e1b07)
+
+**Displaying Data from an API**
+
+Once the data is fetched, develop a component called 'GithubUser' to showcase the retrieved information. Construct a div that contains an H1 element for the name, show the location, and incorporate an image from the avatar URL. Employ React's property passing system to supply the required data to the 'GithubUser' component, ensuring its adaptability for displaying different sets of data.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/550711fa-0bc7-4dcb-b81f-7e0c9b48f2f0)
+
+**Handling Loading States**
+
+When interacting with external APIs, it's important to account for different loading states: loading, success, and error. Manage these states using useState. Create loading, success, and error states along with functions to update them. Within useEffect, set loading to true before initiating the fetch request. Once data is received, set loading to false, and handle errors using the catch block. Adapt the component's rendering logic based on these states, displaying loading messages, data, or error messages as appropriate.
+
+**Fetching Data with GraphQL**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/7822d1a6-a1d0-49e9-a174-96a3390525e7)
+
+Expand your ability to fetch data by integrating with GraphQL APIs. Specify a GraphQL endpoint and formulate a query to retrieve the desired data. Adjust the fetching logic to accommodate GraphQL queries, ensuring the correct structure when accessing the returned data. Pay attention to potential nested data structures, like a double "data" key, and modify your code accordingly to properly handle such cases.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/80f8eeb4-92cb-43ec-80bb-e8ea9a529551)
+
+**Working with Render Props**
+
+Develop a versatile approach for displaying lists by leveraging functions. Design a function named 'List' that accepts three parameters: the data to be displayed, a function to render individual list items ('renderItem'), and a function to render content when the list is empty ('renderEmpty'). Within the 'List' function, conditionally determine whether to render 'renderEmpty' or an unordered list populated by mapping over the data array and applying the 'renderItem' function to each item. Implement this pattern in your application by passing the appropriate data, a function for rendering list items, and a function for handling empty lists. This method ensures dynamic rendering of content tailored to the provided data.
+
+## React Routers
+----------------
+
+**Installing React Router v6**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/5551ce10-bc53-436e-8a0a-6c3b60c604ff)
+
+When building a website with React, smooth navigation between components is essential, especially in a single-page application. React Router comes to the rescue, offering a solution for seamless transitions between pages by rendering different components. In the current setup, React Router version six is being used. To begin, navigate to the project folder (e.g., the 'react-app' folder in chapter seven, lesson one) and install React Router using npm: 'npm install react-router-dom@6'. After installation, modify the App component to display only the App for now. Launch the application with 'npm start', and you should see the App running on localhost:3000. Additionally, create a few components like Home, About, and Contact to simulate a basic website structure. With React Router installed and basic pages set up, the next step involves configuring the router for smooth navigation.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/cc8ed78a-3b50-467d-824d-73a962ea02f9)
+
+**Configuring the Router**
+
+When working with external API calls, it's important to account for various loading states: loading, success, and error. To manage these states, useState is utilized. You can set up loading, success, and error states along with their corresponding updating functions. In the useEffect hook, initialize loading as true before initiating the fetch request. Upon receiving the data, update loading to false. Handle errors using the catch block. Adapt the component's rendering logic based on these states to display loading messages, data, or error messages as appropriate.
+
+**Incorporating the Link Component**
+
+Now that we've set up our components to render on different routes, it's time to enhance user experience. Typing routes into the browser isn't the most user-friendly approach. Enter the 'Link' component from React Router. Simply import it into your Home component and use it to create links to other pages, such as '/about' and '/contact'. Once done, these links will appear on the home route, allowing users to seamlessly navigate to the desired pages with just a click. The Link component is the key to making navigation more user-friendly.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/7f5329d7-d6e0-429b-8b68-64310ab8ccc9)
+
+**Nesting links with React Router v6**
+
+Let's enhance our About component by adding a child page called 'Our History'. Begin by creating the History component along with its content. To nest it under About, we'll perform some route nesting. Navigate back to index.js, where we'll nest a new Route inside the About Route for '/history', rendering the History component. Additionally, ensure to import the History component into your app file. In App.js, import 'Outlet' from react-router-dom and place it where you want the child components to appear. This establishes a structured hierarchy - visit '/about' to see 'About Us', and '/about/history' for 'Our History'. Nested routes offer a powerful way to organize your app, but remember to plan your route configuration first by defining paths and associating them with the appropriate components.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/2bb2e247-cde0-4ba6-9e29-3aa0b1c0aa80)
+
