@@ -1359,3 +1359,54 @@ In the last section, we covered how to dynamically display a list of menu items.
 
 Two methods were proposed to tackle this issue in JavaScript. Initially, using the index (i) as a key for each array item was suggested, but the React documentation warned against it due to potential rendering complications. The alternative involved transforming the data by creating an array of objects with unique IDs for each dish, which avoided rendering problems. The crucial point was to utilize dish.id instead of an index, ensuring data consistency. The significance of keys in preserving data synchronization during dynamic value iteration was highlighted.
 
+**Image Display with React.js**
+
+Now that we've mastered adding text to our React application, let's enhance it with an image. Visit pexels.com, a treasure trove of free stock photos, akin to Disneyland for images.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/24d9697b-e6a5-40d2-abd0-8798f4969d8e)
+
+Pick a cool restaurant pic that vibes with you. We will use the first one, just right-clicking and copying the image address. Now, jump into your component, maybe the main one. Slap an image tag in there, and toss in the source with the URL we snagged. Hit refresh and boom, the picture is in the house. 
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/bc8d5a3a-9f61-461b-83a3-609668019b8e)
+
+Don't overlook the alt attribute; it serves as a caption for screen readers. We've used "A server presenting two plates at a fancy restaurant." Alt text is vital for accessibility.
+
+If you're feeling fancy, save the image to your computer, perhaps naming it "restaurant." Open your files, drag it into the start folder, and update your source to something like "./restaurant.jpg" for a local touch. You can do it either via URL or a local file, whichever suits you best!
+
+**React Fragments**
+
+It's been emphasized previously how important it is to wrap sibling components in a div to avoid errors arising from JSX elements requiring wrapping. However, repeatedly adding div wrappers can clutter the structure. We often end up with divs for root, then another layer, and finally, we get to the actual components on the page. To streamline this, consider using a React Fragment instead of a div.
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/a254ebe2-b2c9-4225-b576-e8c5d4baa32e)
+
+Integrate React.Fragment, and you'll notice the div root neatly encapsulating the header, section, and footer constructed with these components. While there's a shorter syntax available, it's limited to certain React versions. Stick to React.Fragment for now; I'll show the concise syntax later. Remember, React.Fragment won't impact the DOM but facilitates rendering these sibling components.
+
+## React States
+---------------
+
+**Building a Project with Create React App**
+
+We've been utilizing an index.html file to host and test our React components locally, which has been effective. Now, let's explore a project using Create React App, a tool that simplifies setting up React projects by including features like Babel and file bundling.
+
+First, ensure you're in the correct directory in your terminal using 'cd.' Also, verify if Node.js is installed; if not, download it from nodejs.org. Once Node is installed, check its version using 'node -v' and 'npm -v.' If everything looks good, execute 'npx create-react-app your-project-name' (let's name it 'react-app'). This command will install React and other necessary components, which might take a few minutes. Navigate into the project folder using 'cd react-app' and start the project with 'npm start.' Now, open localhost:3000 in your browser to begin exploring your local app. Ready to dive in!
+
+**Navigating a Create React App Project**
+
+Our project is generated within the start folder of the React app. In the package JSON file, you'll find all the dependencies, with key ones including React (for creating components), React DOM (for adding them to the page), and React Scripts (for bundling).
+
+Navigate to the dependencies section to take a look at the testing libraries; we'll explore those later. The critical files are located in the source folder, including index.js, the main JavaScript file serving as the entry point for rendering our app on the DOM. It utilizes document.getElementByID to reference the root element in the public folder's index.HTML, where our React code resides.
+
+Notice that the app is wrapped in react.strict mode in the index file. Strict mode helps identify potential issues during development by activating additional checks. Remember, these checks only run in development, not in production. Our app component, defined in the app.js file, is a function exported as the default.
+
+To run the React app, navigate to its directory and use 'NPM start,' which launches it on localhost:3000. Changes made are instantly reflected, a significant improvement over traditional HTML development. Importing a CSS file allows styling changes in real-time. A neat feature is create-react-app automatically handling imports and applying class names.
+
+**Destructuring Arrays and Objects**
+
+Understanding destructuring in JavaScript is crucial for effectively handling state in our applications. Instead of manually specifying properties in our components, like adding a "library" property with the value "react," we can dynamically retrieve it from the props object in our app.js file using props.library. To improve clarity and streamline our code, we can utilize destructuring to directly extract properties by their keys, such as directly extracting "library" as a variable without accessing props.library.
+
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/3242bd38-0aeb-47bf-9c78-a4aa5841e4d6)
+
+
+This concept of destructuring also applies to arrays. For example, creating an array of cities allows us to extract values using array indexing. However, unlike object destructuring, we can't assign variable names based on keys. Instead, we utilize array destructuring to assign names to values based on their positions in the array, like "first city" or "second." This enables us to access specific values like "Tokyo" or "Tahoe City" easily. Mastery of both object and array destructuring is essential for our upcoming lessons.
+
