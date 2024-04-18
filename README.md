@@ -1537,3 +1537,31 @@ Let's enhance our About component by adding a child page called 'Our History'. B
 
 ![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/2bb2e247-cde0-4ba6-9e29-3aa0b1c0aa80)
 
+## React Deployment
+-------------------
+
+**Running Tests with Create React App**
+
+Rather than relying solely on 'npm start' to run our React app locally, Create React App offers a convenient feature. By using 'npm test', we can execute all tests within our app. Checking the terminal may reveal failed tests, such as those in the 'App.test.js' file, highlighting potential issues in our code or indicating missing tests. In the next section, we'll explore the process of writing and connecting tests to our app's functions.
+
+**Testing Functions with Jest**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/81c190ac-4817-411b-affd-82cda06e3914)
+
+Let's explore testing small functions with Jest. Start by creating two files in the source folder: 'functions.js' for the code and 'functions.test.js' for the tests. Since Jest is preconfigured in Create React App, we can focus on writing the tests. For example, let's test a function named 'timesTwo'. Import it into the test file, invoke it with a value, and use Jest matchers to expect the result. Testing like this allows us to identify issues, such as incorrect exports, and ensures the reliability of our code.
+
+**Using React Testing Library**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/c758822f-ae75-4184-b7ae-00a63e61b026)
+
+Create React App offers another useful testing tool called React Testing Library. Let's illustrate its functionality by developing a 'Star' component along with its test file. Using queries in the test, we can verify if our component, even before rendering to the DOM, includes the anticipated content. This automated approach ensures the correct content placement, streamlining our testing process.
+
+**Testing Events with React Testing Library**
+
+![image](https://github.com/MihlaliKota/Intro-To-JavaScript/assets/133135575/56e73fb1-cd9d-4755-b4b7-264799b3e604)
+
+Testing events plays a vital role in ensuring the reliability of our code. To demonstrate this, we'll develop a 'Checkbox' component and its corresponding test file. In this scenario, we'll utilize React's 'useReducer'. The test will verify if selecting the checkbox correctly changes its value to true. We'll employ queries like 'getByLabelText' and 'fireEvent.click' to simulate events. By conducting such tests, we can identify errors such as missing label associations, gaining valuable insights into potential issues within our codebase.
+
+**Deploying to Netlify**
+
+We're going to delve into deploying our React app using Netlify. Upon logging in, we can add a new site. If GitHub integration isn't available, we have the option to deploy manually. Netlify expects the built version of our project, so we execute 'npm run build' to generate the build folder. By dragging and dropping this folder onto Netlify, we kickstart the deployment process. Netlify's user-friendly interface offers easy customization options, such as setting up a custom domain or enabling HTTPS support. With this process complete, our React app is now live and accessible via the provided link. Netlify simplifies the deployment process, making it swift and user-friendly.
